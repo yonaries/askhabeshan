@@ -1,7 +1,8 @@
 <?php
   include('../config/connect.php');
   include ('../config/header.php');
-
+?>
+<?php
     $postid=$_GET['id'];
     $getposts = "SELECT * FROM `user_post` WHERE post_id='$postid'";
     $fetchpost = mysqli_query($conn,$getposts);
@@ -27,7 +28,7 @@
         }
 
     $getcategory = "SELECT * FROM `category`";
-    $fetchcategory=mysqli_query($conn,$getcategory);
+    $fetchcategory=mysqli_query($conn,$getcategory);//fetching catagories for 
     $fetchcategory2=mysqli_query($conn,$getcategory);
     $getanswers = "SELECT * FROM `user_post_answers` WHERE post_id='$postid' ORDER BY answer_id DESC";
     $fetchanswer = mysqli_query($conn,$getanswers);
@@ -177,13 +178,13 @@ $counter=1;
                     </div>
                 </div>
                 <hr>
-                <div class="settings-link">
+                <!-- <div class="settings-link">
                     <div>
                         <a href="#"><img src="../assets/icons/help.png" class="settings-icons" />Privacy and Policy</a>
                         <p>Read Our Privacy and Policy</p>
                     </div>
                 </div>
-                <hr>
+                <hr> -->
                 <div class="settings-link">
                     <div>                        
                         <a href="login.php"><img src="../assets/icons/logout.png" class="settings-icons" />Logout</a>
@@ -239,7 +240,7 @@ $counter=1;
             <div class="posts-container">
                 <div class="user-profile">
                     <img src="../assets/icons/user.png" />
-                    <div>
+                    <div class="usertime">
                         <p><?php
                             echo $_SESSION['postusername'];
                         ?></p>

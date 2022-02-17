@@ -42,7 +42,7 @@ include ('../config/connect.php');
                 <form autocomplete="off" method="POST" class="signin-form">
                     <h2 class="title">Log In</h2>
                     <div class="error-message">
-                        <p> <?php echo $errormessage ?> </p>
+                        <?php echo $errormessage ?>
                     </div>
                     <div class="input-field">
                         <img src="../assets/icons/user.svg" alt="" class="form-icon" /><input type="email" name="email" placeholder="Email" />

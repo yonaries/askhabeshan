@@ -1,12 +1,14 @@
 <?php
     include ('../config/connect.php');
     include ('../config/header.php');
-
+    $profileuser=$_SESSION['currentuser_id'];//current username
+    $profileemail=$_SESSION['email'];//current user email
+    $profilepassword=$_SESSION['password'];//current user password
     $getposts = "SELECT * FROM `user_post` ORDER BY post_id DESC";
     $fetchpost = mysqli_query($conn,$getposts);
     $getcategory = "SELECT * FROM `category`";
     $fetchcategory=mysqli_query($conn,$getcategory);
-    $fetchcategory2=mysqli_query($conn,$getcategory);          
+    $fetchcategory2=mysqli_query($conn,$getcategory);         
 
 ?>
 <?php
@@ -89,7 +91,7 @@
                 <form method="post" autocomplete="off">
                     <textarea name="posttext" id="" rows="3" placeholder="What do you ask today?"></textarea>
                     <div class="attachemet-links">
-                        <a href="#"><img src="../assets/icons/photo.png" alt="" />Photo / Video</a>
+                        <a href="#"><img src="../assets/icons/photo.png" alt="" />Photo</a>
                         <select name="postcategory" id="cat">
                         <?php for($i=0;$i<$fetchcategory ->num_rows;$i++){
                                if($fetchcategory->num_rows>0){
@@ -121,7 +123,7 @@
                     <img src="../assets/icons/user.png" />
                     <div>
                         <p style="font-size: 20px;"><?php echo $_SESSION['user'];?></p>
-                        <a href="#">Edit profile</a>
+                        <a href="../pages/profile.php?id=<?php echo $profileuser?>">Edit profile</a>
                     </div>
                 </div>
                 <hr>
@@ -134,13 +136,13 @@
                     </div>
                 </div>
                 <hr>
-                <div class="settings-link">
+                <!-- <div class="settings-link">
                     <div>
                         <a href="#"><img src="../assets/icons/help.png" class="settings-icons" />Privacy and Policy</a>
                         <p>Read Our Privacy and Policy</p>
                     </div>
-                </div>
-                <hr>
+                </div> -->
+
                 <div class="settings-link">
                     <div>                        
                         <a href="login.php"><img src="../assets/icons/logout.png" class="settings-icons" />Logout</a>
@@ -264,7 +266,6 @@
                 <?php           
                     if(isset($_POST['postanswers']) && isset($_POST['answer-cta'])){
                         $postanswer=$_POST['postanswers'];
-                        $userid2=$_SESSION['currentuser_id'];
                         $postid=$_SESSION['post_id'];
                         // $postimage=$_POST['postimage'];
                         // $postaudio=$_POST['postaudio'];
@@ -272,7 +273,7 @@
                         $posttime=date("Y-m-d h:i:a");
                     
                         $answersql="INSERT INTO `user_post_answers` SET answer='$postanswer',
-                                                            user_id='$userid2',
+                                                            user_id='$userid',
                                                             post_id='$postid',
                                                             date='$posttime'"; 
                         $publish = mysqli_query($conn,$answersql);    

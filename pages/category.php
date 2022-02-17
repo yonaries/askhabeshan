@@ -44,7 +44,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ASK HABESHAN</title>
-    <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../css/catagory.css" />
 </head>
 
 <body>
@@ -127,13 +127,13 @@
                     </div>
                 </div>
                 <hr>
-                <div class="settings-link">
+                <!-- <div class="settings-link">
                     <div>
                         <a href="#"><img src="../assets/icons/help.png" class="settings-icons" />Privacy and Policy</a>
                         <p>Read Our Privacy and Policy</p>
                     </div>
                 </div>
-                <hr>
+                <hr> -->
                 <div class="settings-link">
                     <div>                        
                         <a href="login.php"><img src="../assets/icons/logout.png" class="settings-icons" />Logout</a>
@@ -292,7 +292,6 @@
             }
                  else { ?><div class="no-post"><h2><?php echo "No Questions,<br> Be the first to Ask.";?></h2></div><?php }
                 ?>
-            <button type="button" class="browse-more-btn">Browse More</button>
         </div>
         <!----------right-bar-------->
         <div class="right-side">
