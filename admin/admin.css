@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+  height: 100vh;
+}
+header {
+  background: rgb(0, 0, 68);
+  margin: 0;
+  padding: 1em 0;
+  width: 100%;
+}
+nav {
+  margin-left: 1em;
+  display: flex;
+}
+.navleft {
+  color: white;
+}
+.main-container {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+.left-side {
+  background: rgb(0, 0, 68);
+  width: 17%;
+  height: 100%;
+}
+.left-side ul {
+  list-style: none;
+  margin-top: 3em;
+  padding: 0;
+  text-align: center;
+}
+.left-side ul li {
+  margin: 20px 0;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  padding-top: 20px;
+  font-size: 17px;
+  width: 100%;
+  height: 40px;
+}
+.left-side ul li:active {
+  background: yellow;
+}
+.left-side ul a {
+  text-decoration: none;
+  color: white;
+}
+.active-bar {
+  background: #f5f5f5;
+}
+#active-bar {
+  color: #2282ff;
+}
+.right-side {
+  margin-top: 2em;
+  padding: 0;
+  width: 80%;
+}
+.right-side h2 {
+  color: grey;
+  margin-left: 15px;
+  font-size: 30px;
+}
+
+.top-container {
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 30%;
+}
+.report-cards {
+  background: white;
+  padding: 1em;
+  border-radius: 6px;
+  font-size: 18px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.37);
+}
+.report-cards h3 {
+  font-size: 40px;
+  color: #2282ff;
+}
+.bottom-container {
+  width: 100%;
+  padding: 1em;
+}
+.bottom-container h2 {
+  margin: 0;
+}
+.recent-card {
+  margin-top: 1em;
+  background: white;
+  padding: 1em;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.37);
+}
+table {
+  margin-top: 1em;
+  width: 98%;
+  background: #f2f2f2;
+}
+table th {
+  background: rgb(248, 47, 87);
+}
+table tr {
+  background: #2282ff17;
+}
+table td {
+  font-size: 15px;
+}
+textarea {
+  width: 98%;
+  height: 20px;
+  background: transparent;
+  outline: 0;
+  overflow: hidden;
+  border: 0;
+  font-size: 15px;
+  resize: none;
+}
