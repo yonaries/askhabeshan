@@ -22,5 +22,6 @@ Database name: askhabeshan
  ## API
   - [TeldaSMS](https://telda.com.et/)
   
-// Skip the phone verification page on registeration.
-// There is a phpmailer package for emailing purpose.
+Skip the phone verification page on registeration.
+
+There is a phpmailer package for emailing purpose.
