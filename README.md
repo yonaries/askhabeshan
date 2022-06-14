@@ -4,13 +4,13 @@
 
 
 :information_source: credentials
-Admin Username: admin
+Admin Username: admin || 
 Admin password: admin123
 
 Database name: askhabeshan
 ================================
 
-## Technoligies used
+## Tech Stack
   - HTML
   - CSS
   - JAVASCRIPT
